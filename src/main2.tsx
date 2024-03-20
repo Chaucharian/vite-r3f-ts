@@ -3,7 +3,7 @@ import { Leva } from 'leva'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ACESFilmicToneMapping, SRGBColorSpace } from 'three'
-import { Scene } from './components/Scene'
+import { Scene } from './pages/3D/Scene'
 import './styles/main.css'
 
 function Main() {

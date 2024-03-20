@@ -1,27 +1,101 @@
-
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Color, MeshStandardMaterial } from 'three'
+import { useFrame } from '@react-three/fiber'
 
-export function Model(props:any) {
-  const model:any = useGLTF('/models/glo_device_wpp.glb')
-  const { nodes, materials }= model
-  const { primary, secondary } = props.colors
-  const primaryColor = new MeshStandardMaterial({ color: 
-    primary
+const silverMaterial = new MeshStandardMaterial({
+  color: 0xc0c0c0, // Silver color
+  roughness: 0.4, // Moderate roughness
+  metalness: 0.8, // High metalness
+  emissive: 0x000000, // No emissive color
 })
-  const secondaryColor = new MeshStandardMaterial({ color: secondary })
-  
-  console.log('COLOR',primary)
+
+// 2. Gold Metal
+const goldMaterial = new MeshStandardMaterial({
+  color: 0xffd700, // Gold color
+  roughness: 0.2, // Low roughness
+  metalness: 0.9, // Very high metalness
+  emissive: 0x000000, // No emissive color
+})
+
+// 3. Copper Metal
+const copperMaterial = new MeshStandardMaterial({
+  color: 0xb87333, // Copper color
+  roughness: 0.3, // Moderate roughness
+  metalness: 0.7, // High metalness
+  emissive: 0x000000, // No emissive color
+})
+
+// 4. Steel Metal
+const steelMaterial = new MeshStandardMaterial({
+  color: 0x43464b, // Steel color
+  roughness: 0.5, // Moderate roughness
+  metalness: 0.6, // Moderate metalness
+  emissive: 0x000000, // No emissive color
+})
+
+// 5. Bronze Metal
+const bronzeMaterial = new MeshStandardMaterial({
+  color: 0xcd7f32, // Bronze color
+  roughness: 0.4, // Moderate roughness
+  metalness: 0.8, // High metalness
+  emissive: 0x000000, // No emissive color
+})
+
+// 6. Aluminum Metal
+const aluminumMaterial = new MeshStandardMaterial({
+  color: 0x808080, // Aluminum color
+  roughness: 0.2, // Low roughness
+  metalness: 0.9, // Very high metalness
+  emissive: 0x000000, // No emissive color
+})
+
+// 7. Titanium Metal
+const titaniumMaterial = new MeshStandardMaterial({
+  color: 0x778899, // Titanium color
+  roughness: 0.1, // Very low roughness
+  metalness: 1.0, // Maximum metalness
+  emissive: 0x000000, // No emissive color
+})
+
+// 8. Brass Metal
+const brassMaterial = new MeshStandardMaterial({
+  color: 0xd4af37, // Brass color
+  roughness: 0.3, // Moderate roughness
+  metalness: 0.8, // High metalness
+  emissive: 0x000000, // No emissive color
+})
+
+export function Model(props: any) {
+  const model: any = useGLTF('/models/glo_device_wpp.glb')
+  const { nodes, materials } = model
+  const { primary, secondary } = props.colors
+  const primaryColor = new MeshStandardMaterial({
+    color: primary,
+    roughness: 0.4, // Moderate roughness
+    metalness: 0.8, // High metalness
+    emissive: 0x000000, // No emissive color
+  })
+  const secondaryColor = new MeshStandardMaterial({
+    color: secondary,
+    roughness: 0.1, // Very low roughness
+    metalness: 1.0, // Maximum metalness
+    emissive: 0x000000,
+  })
+  const ref: any = useRef()
+  console.log('COLOR', primary)
+
   return (
-    // [3, 2, 9]
-    <group position={[-85,2,30]}  {...props}>
+    <group rotation={[0, 0, 0]} ref={ref} {...props} position={[-87, -1, 30]}>
       <group position={[10.067, 0, -17.857]} rotation={[-Math.PI / 2, 0, -0.424]}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Obj_152.geometry}
-        material={primaryColor}
+          // material={brassMaterial} vaa
+
+          material={primaryColor}
+          material-envMapIntensity={1}
           scale={0.03}
         />
       </group>
@@ -31,8 +105,8 @@ export function Model(props:any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_157.geometry}
-        //   material={secondaryColor}
-        material={secondaryColor}
+          //   material={secondaryColor}
+          material={secondaryColor}
           scale={0.03}
         />
       </group>
@@ -41,8 +115,8 @@ export function Model(props:any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_153.geometry}
-        //   material={secondaryColor}
-        material={secondaryColor}
+          //   material={secondaryColor}
+          material={secondaryColor}
           scale={0.03}
         />
       </group>
@@ -51,8 +125,8 @@ export function Model(props:any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_154.geometry}
-        //   material={secondaryColor}
-        material={secondaryColor}
+          //   material={secondaryColor}
+          material={secondaryColor}
           scale={0.03}
         />
       </group>
@@ -70,7 +144,7 @@ export function Model(props:any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_156.geometry}
-        //   material={secondaryColor}
+          //   material={secondaryColor}
           material={secondaryColor}
           scale={0.03}
         />

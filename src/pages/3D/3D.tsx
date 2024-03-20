@@ -1,12 +1,14 @@
+import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
+import { ACESFilmicToneMapping, SRGBColorSpace } from 'three'
 import { Layout } from '../../components/Layout'
-import { Scene } from '../../components/Scene'
+import { Scene } from './Scene'
 
 export const Model = () => {
   return (
     <Layout>
-<Leva
+      <Leva
         collapsed={false}
         oneLineLabels={false}
         flat={true}
@@ -23,21 +25,20 @@ export const Model = () => {
         dpr={[1, 2]}
         gl={{
           antialias: true,
-          // toneMapping: ACESFilmicToneMapping,
-          // outputColorSpace: SRGBColorSpace,
+          toneMapping: ACESFilmicToneMapping,
+          outputColorSpace: SRGBColorSpace,
         }}
         camera={{
-          fov: 55,
+          fov: 5,
+          // fov: 70,
           near: 0.1,
           far: 200,
-          position: [3, 2, 9],
+          zoom: 0.125,
+          position: [6,4, 1],
         }}
-        // camera={{ position: [-0.5, 1, 2] }}
         shadows
       >
         <Scene />
-        <axesHelper args={[5]} />
-
       </Canvas>
     </Layout>
   )
