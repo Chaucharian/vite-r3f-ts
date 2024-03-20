@@ -26,16 +26,16 @@ function Main() {
         dpr={[1, 2]}
         gl={{
           antialias: true,
-          toneMapping: ACESFilmicToneMapping,
-          outputColorSpace: SRGBColorSpace,
+          // toneMapping: ACESFilmicToneMapping,
+          // outputColorSpace: SRGBColorSpace,
         }}
-        // camera={{
-        //   fov: 55,
-        //   near: 0.1,
-        //   far: 200,
-        //   position: [3, 2, 9],
-        // }}
-        camera={{ position: [-0.5, 1, 2] }}
+        camera={{
+          fov: 55,
+          near: 0.1,
+          far: 200,
+          position: [3, 2, 9],
+        }}
+        // camera={{ position: [-0.5, 1, 2] }}
         shadows
       >
         <Scene />
