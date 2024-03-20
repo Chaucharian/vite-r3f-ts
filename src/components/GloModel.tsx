@@ -69,7 +69,7 @@ const brassMaterial = new MeshStandardMaterial({
 export function Model(props: any) {
   const model: any = useGLTF('/models/glo_device_wpp.glb')
   const { nodes, materials } = model
-  const { primary, secondary } = props.colors
+  const { primary, secondary, detail } = props.colors
   const primaryColor = new MeshStandardMaterial({
     color: primary,
     roughness: 0.4, // Moderate roughness
@@ -78,6 +78,12 @@ export function Model(props: any) {
   })
   const secondaryColor = new MeshStandardMaterial({
     color: secondary,
+    roughness: 0.1, // Very low roughness
+    metalness: 1.0, // Maximum metalness
+    emissive: 0x000000,
+  })
+  const detailColor = new MeshStandardMaterial({ // for black
+    color: detail ? detail : primary,
     roughness: 0.1, // Very low roughness
     metalness: 1.0, // Maximum metalness
     emissive: 0x000000,
@@ -145,7 +151,7 @@ export function Model(props: any) {
           receiveShadow
           geometry={nodes.Obj_156.geometry}
           //   material={secondaryColor}
-          material={secondaryColor}
+          material={detailColor}
           scale={0.03}
         />
       </group>

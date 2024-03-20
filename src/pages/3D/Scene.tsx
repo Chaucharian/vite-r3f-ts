@@ -14,30 +14,30 @@ import {
   RGBELoader,
 } from 'three-stdlib'
 import * as THREE from 'three'
+import { ColorButtons } from '../../components/ColorButtons'
+import { useSceneStore } from '../../stores/sceneStore'
 
 function Scene() {
-  const { performance } = useControls('Monitoring', {
-    performance: false,
-  })
-  const lights = useControls('Lights', {
-    x: 2,
-    y: 2,
-    z: 2,
-    color: '#FFF'
-  })
-  const modelColors = useControls('Model',{
-    primary: '#000',
-    secondary: '#FFF',
-  })
+  // const { performance } = useControls('Monitoring', {
+  //   performance: false,
+  // })
+  // const lights = useControls('Lights', {
+  //   x: 2,
+  //   y: 2,
+  //   z: 2,
+  //   color: '#FFF'
+  // })
+  // const modelColors = useControls('Model',{
+  //   primary: '#000',
+  //   secondary: '#FFF',
+  // })
   const lightRef = useRef<any>()
+  const color = useSceneStore((state:any) => state.color);
 
 // FOR TESTING CAMERA POSITION
-useFrame((state)=> {
-console.log(state.camera)
-  // console.log(state.camera.position)
-  // console.log(state.camera.rotation)
-
-})
+// useFrame((state)=> {
+// console.log(state.camera)
+// })
 
 const texture = useLoader(
   RGBELoader,
@@ -57,9 +57,8 @@ texture.mapping = THREE.EquirectangularReflectionMapping
 
   return (
     <>
-      {performance && <Perf position='top-left' />}
+      {/* {performance && <Perf position='top-left' />} */}
       {/* <Environment map={texture} /> */}
-      {/* <color attach="background" args={['#141622']} /> */}
       <ambientLight intensity={0.4} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
       <Environment resolution={256}>
@@ -80,7 +79,7 @@ texture.mapping = THREE.EquirectangularReflectionMapping
               castShadow
               shadow-mapSize={[512, 512]}
             /> */}
-      <Model colors={{ primary: modelColors.primary, secondary: modelColors.secondary}}/>
+      <Model colors={color}/>
       {/* <Plane/> */}
       {/* <axesHelper/> */}
     </>
@@ -88,3 +87,4 @@ texture.mapping = THREE.EquirectangularReflectionMapping
 }
 
 export { Scene }
+
