@@ -1,53 +1,28 @@
-import { Canvas } from '@react-three/fiber'
-import { Leva } from 'leva'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ACESFilmicToneMapping, SRGBColorSpace } from 'three'
-import { Scene } from './Scene'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Dashboard, Home, Hyper, Funzionalita, Uso, Model, QrCode, Bye } from './pages'
 import './styles/main.css'
 
-function Main() {
+const App = () => {
   return (
-    <div className='main'>
-      <Leva
-        collapsed={false}
-        oneLineLabels={false}
-        flat={true}
-        theme={{
-          sizes: {
-            titleBarHeight: '28px',
-          },
-          fontSizes: {
-            root: '10px',
-          },
-        }}
-      />
-      <Canvas
-        dpr={[1, 2]}
-        gl={{
-          antialias: true,
-          // toneMapping: ACESFilmicToneMapping,
-          // outputColorSpace: SRGBColorSpace,
-        }}
-        camera={{
-          fov: 55,
-          near: 0.1,
-          far: 200,
-          position: [3, 2, 9],
-        }}
-        // camera={{ position: [-0.5, 1, 2] }}
-        shadows
-      >
-        <Scene />
-        <axesHelper args={[5]} />
-
-      </Canvas>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='dashboard' element={<Dashboard />} />
+        <Route path='hyper' element={<Hyper />} />
+        <Route path='funzionalita' element={<Funzionalita />} />
+        <Route path='uso' element={<Uso />} />
+        <Route path='3d' element={<Model />} />
+        <Route path='qr' element={<QrCode />} />
+        <Route path='bye' element={<Bye />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Main />
+    <App />
   </React.StrictMode>
 )

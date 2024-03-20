@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import { useControls } from 'leva'
 import { Perf } from 'r3f-perf'
 import { useRef } from 'react'
-import {Model} from './components/GloModel'
+import {Model} from './GloModel'
 
 function Scene() {
   const { performance } = useControls('Monitoring', {
