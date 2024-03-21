@@ -13,6 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+@font-face {
+  font-family: 'MontRegular';
+  src: local('MontRegular'), url('../fonts/Mont-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'MontBold';
+  src: local('MontBold'), url('../fonts/Mont-Bold.otf') format('opentype');
+  font-weight: normal;
+}
 
 html,
 body {

@@ -19,6 +19,7 @@ export const styles = {
   hi: {
     fontSize: '100px',
     animation: '$sayhi 1.5s ease-out',
+    fontFamily: 'MontRegular',
   },
 
   hiBlocker: {

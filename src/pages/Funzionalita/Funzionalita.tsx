@@ -1,4 +1,5 @@
 import { Layout } from '../../components/Layout'
+import { LegalAdvice } from '../../components/LegalAdvice'
 import { makeStyles } from '@material-ui/core'
 import { Footer } from '../../components/Footer/Footer'
 import { Button } from '../../components/Button/Button'
@@ -51,6 +52,7 @@ export const Funzionalita = () => {
         <Footer>
           <Button link={'/uso'} className={''} />
         </Footer>
+        <LegalAdvice />
       </div>
     </Layout>
   )

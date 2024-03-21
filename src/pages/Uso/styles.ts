@@ -8,12 +8,21 @@ export const styles = {
     justifyContent: 'space-between',
   },
 
+  hyperContent: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    justifyContent: 'space-between',
+  },
+
   hyperTitle: {
     width: '100%',
     display: 'flex',
     alignItems: 'end',
     justifyContent: 'center',
-    fontSize: '30px',
+    fontSize: '40px',
+    marginBottom: '20px',
+    fontFamily: 'MontBold',
   },
 
   hyperVideo: {
@@ -24,6 +33,7 @@ export const styles = {
     maxWidth: '1000px',
     position: 'relative' as const,
     display: 'flex',
+    flexDirection: 'column' as const,
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,5 +1,6 @@
 import { Layout } from '../../components/Layout'
 import { Button } from '../../components/Button/Button'
+import { LegalAdvice } from '../../components/LegalAdvice'
 import { Footer } from '../../components/Footer/Footer'
 import { makeStyles } from '@material-ui/core'
 import { styles } from './styles'
@@ -22,6 +23,7 @@ export const Dashboard = () => {
               alignItems: 'center',
               justifyContent: 'space-around',
               width: '100%',
+              marginBottom: '20px',
             }}
           >
             <div className={classes.dashboardItem}>
@@ -51,11 +53,12 @@ export const Dashboard = () => {
             <div className={classes.dashboardItem}>
               <span className={classes.title}>Scegli il tuo colore</span>
               <img src={home4} className={classes.image} />
-              <Button link='/uso' className={classes.cta} />
+              <Button link='/3d' className={classes.cta} />
             </div>
           </div>
 
           <Footer>{null}</Footer>
+          <LegalAdvice />
         </div>
       </Layout>
     </>
