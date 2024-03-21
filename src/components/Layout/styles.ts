@@ -25,8 +25,5 @@ export const styles = {
     width: '100%',
     height: 'calc(100vh - 180px)',
     boxSizing: 'border-box' as const,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 }
