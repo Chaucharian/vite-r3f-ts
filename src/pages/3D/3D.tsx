@@ -8,9 +8,8 @@ import { useSceneStore } from '../../stores/sceneStore'
 import { Scene } from './Scene'
 
 export const Model = () => {
-  const changeColor = useSceneStore((state:any) => state.changeColor);
-  const color = useSceneStore((state:any) => state.color);
-
+  const changeColor = useSceneStore((state: any) => state.changeColor)
+  const color = useSceneStore((state: any) => state.color)
 
   return (
     <>
@@ -25,8 +24,10 @@ export const Model = () => {
           display: 'flex',
         }}
       >
-        <div style={{ width: 400, height: '30%', display: 'flex', justifyContent:'center' }}>
-          <ColorButtons selected={color} onClick={changeColor}/>
+        <div
+          style={{ width: 400, height: '15%', display: 'flex', justifyContent: 'center' }}
+        >
+          <ColorButtons selected={color} onClick={changeColor} />
         </div>
       </div>
       <Layout>

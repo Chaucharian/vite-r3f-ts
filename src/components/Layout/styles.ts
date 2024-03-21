@@ -1,5 +1,5 @@
 export const styles = {
-  cotainer: {
+  container: {
     width: '100%',
     height: '100%',
   },
@@ -7,11 +7,15 @@ export const styles = {
     width: '100%',
     height: '180px',
     padding: '40px',
-    boxSizing: 'border-box',
+    boxSizing: 'border-box' as const,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     fontSize: '3em',
+
+    '& svg': {
+      fill: 'white !important',
+    },
   },
   logo: {
     width: '100px',
@@ -20,7 +24,7 @@ export const styles = {
   content: {
     width: '100%',
     height: 'calc(100vh - 180px)',
-    boxSizing: 'border-box',
+    boxSizing: 'border-box' as const,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
