@@ -17,7 +17,7 @@ export const Model = () => {
   const changeColor = useSceneStore((state: any) => state.changeColor)
   const color = useSceneStore((state: any) => state.color)
   const [isModalOpen, openModal] = useState(false)
-  const styles  = useStyles()
+  const styles = useStyles()
   return (
     <>
       <div
@@ -44,10 +44,17 @@ export const Model = () => {
           }}
         >
           <ColorButtons selected={color} onClick={changeColor} />
-          <div style={{height: "6%"}}/>
-          <ButtonBase label='VEDI QR' onClick={() => openModal(true)} />
-          <div style={{height: "16%"}}/>
-          <Button link="/bye" className={styles.button} />
+          <div style={{ height: '6%' }} />
+          <ButtonBase
+            label='VEDI QR'
+            onClick={() => openModal(true)}
+            styles={{
+              background:
+                'linear-gradient(90deg, rgba(227,86,5,1) 0%, rgba(250,157,27,1) 100%)',
+            }}
+          />
+          <div style={{ height: '16%' }} />
+          {/* <Button link="/bye" className={styles.button} /> */}
           <Modal open={isModalOpen} onClose={() => openModal(false)}>
             <div
               style={{
@@ -81,26 +88,27 @@ export const Model = () => {
             },
           }}
         /> */}
-
-        <Canvas
-          dpr={[1, 2]}
-          gl={{
-            antialias: true,
-            toneMapping: ACESFilmicToneMapping,
-            outputColorSpace: SRGBColorSpace,
-          }}
-          camera={{
-            fov: 5,
-            // fov: 70,
-            near: 0.1,
-            far: 200,
-            zoom: 0.125,
-            position: [6, 4, 1],
-          }}
-          shadows
-        >
-          <Scene />
-        </Canvas>
+        <div style={{ position: 'absolute', top: 0, width: '100vw', height: '100vh' }}>
+          <Canvas
+            dpr={[1, 2]}
+            gl={{
+              antialias: true,
+              toneMapping: ACESFilmicToneMapping,
+              outputColorSpace: SRGBColorSpace,
+            }}
+            camera={{
+              fov: 5,
+              // fov: 70,
+              near: 0.1,
+              far: 200,
+              zoom: 0.125,
+              position: [6, 4, 1],
+            }}
+            shadows
+          >
+            <Scene />
+          </Canvas>
+        </div>
       </Layout>
     </>
   )
