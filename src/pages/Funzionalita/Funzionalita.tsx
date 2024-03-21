@@ -20,7 +20,7 @@ export const Funzionalita = () => {
             display: 'flex',
             width: '100%',
             height: '100%',
-            maxWidth: '800px',
+            // maxWidth: '800px',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
@@ -33,8 +33,8 @@ export const Funzionalita = () => {
               alignItems: 'center',
             }}
           >
-            <img style={{ width: '45%' }} src={intensita} />
-            <img style={{ width: '45%' }} src={rovescia} />
+            <img className={classes.image} src={intensita} />
+            <img className={classes.image} src={rovescia} />
           </div>
           <div
             style={{
@@ -44,8 +44,8 @@ export const Funzionalita = () => {
               marginTop: '50px',
             }}
           >
-            <img style={{ width: '45%' }} src={batteria} />
-            <img style={{ width: '45%' }} src={sessione} />
+            <img className={classes.image} src={batteria} />
+            <img className={classes.image} src={sessione} />
           </div>
         </div>
         <Footer>

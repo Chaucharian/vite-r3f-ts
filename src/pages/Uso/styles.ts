@@ -17,11 +17,11 @@ export const styles = {
   },
 
   hyperVideo: {
-    maxWidth: '700px',
+    maxWidth: '1000px',
   },
 
   videoContainer: {
-    maxWidth: '700px',
+    maxWidth: '1000px',
     position: 'relative' as const,
     display: 'flex',
     alignItems: 'center',

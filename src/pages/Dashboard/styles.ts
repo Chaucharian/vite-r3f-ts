@@ -13,10 +13,15 @@ export const styles = {
     flexDirection: 'column' as const,
     padding: '30px',
     width: '50%',
-    height: '300px',
     justifyContent: 'space-between',
   },
+  title: {
+    fontSize: '2em',
+    marginBottom: '20px',
+  },
+  image: { width: '70%', height: 'auto', marginBottom: '30PX' },
+
   cta: {
-    width: '150px',
+    // width: '150px',
   },
 }

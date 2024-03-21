@@ -2,6 +2,7 @@ import { Button } from '../../components/Button/Button'
 import { Footer } from '../../components/Footer/Footer'
 import { makeStyles } from '@material-ui/core'
 import { styles } from './styles.ts'
+
 const useStyles = makeStyles(() => styles)
 
 export const Home = () => {
