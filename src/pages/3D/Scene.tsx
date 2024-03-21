@@ -60,8 +60,15 @@ const depthBuffer = useDepthBuffer({ frames: 1 })
   return (
     <>
       {/* {performance && <Perf position='top-left' />} */}
-      <Environment map={texture}   blur={0.4} resolution={0.2} />
-      {/* <ambientLight intensity={0.9} color="white"/> */}
+      <Environment map={texture}   blur={0.4} resolution={0.2} >
+      <color attach="background" args={['white']} />
+      <mesh  scale={100}>
+        <sphereGeometry />
+        <meshBasicMaterial transparent opacity={7} map={texture} side={THREE.BackSide} toneMapped={false} />
+      </mesh>
+        </Environment>
+
+      {/* <ambientLight intensity={5}  color="white"/> */}
       {/* <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow /> */}
       {/* <Environment resolution={256}>
         <group rotation={[-Math.PI / 3, 0, 1]}>

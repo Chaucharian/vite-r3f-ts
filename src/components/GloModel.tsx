@@ -82,6 +82,12 @@ export function Model(props: any) {
     metalness: 1.0, // Maximum metalness
     emissive: 0x000000,
   })
+  const displayColor = new MeshStandardMaterial({
+    color: '#000',
+    roughness: 0.3, // Moderate roughness
+    metalness: 0.8, // High metalness
+    emissive: 0x000000, // No emissive color
+  })
   const detailColor = new MeshStandardMaterial({ // for black
     color: detail ? detail : primary,
     roughness: 0.1, // Very low roughness
@@ -150,7 +156,6 @@ export function Model(props: any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_156.geometry}
-          //   material={secondaryColor}
           material={detailColor}
           scale={0.03}
         />
@@ -187,7 +192,7 @@ export function Model(props: any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_160.geometry}
-          material={secondaryColor}
+          material={displayColor}
           scale={0.03}
         />
       </group>
@@ -196,7 +201,7 @@ export function Model(props: any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_166.geometry}
-          material={secondaryColor}
+          material={displayColor}
           scale={0.03}
         />
       </group>
@@ -205,7 +210,7 @@ export function Model(props: any) {
           castShadow
           receiveShadow
           geometry={nodes.Obj_161.geometry}
-          material={secondaryColor}
+          material={primaryColor}
           scale={0.03}
         />
       </group>
