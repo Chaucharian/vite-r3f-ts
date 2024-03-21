@@ -4,6 +4,8 @@ export const styles = {
     height: '100%',
   },
   header: {
+    pointerEvents: 'all',
+    zIndex: 10,
     width: '100%',
     height: '180px',
     padding: '40px',
