@@ -16,6 +16,7 @@ export const Dashboard = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-around',
+              width: '100%',
             }}
           >
             <div className={classes.dashboardItem}>
@@ -38,6 +39,7 @@ export const Dashboard = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-around',
+              width: '100%',
             }}
           >
             <div className={classes.dashboardItem}>

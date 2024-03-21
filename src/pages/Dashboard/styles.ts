@@ -12,7 +12,7 @@ export const styles = {
     alignItems: 'center',
     flexDirection: 'column' as const,
     padding: '30px',
-    width: '300px',
+    width: '50%',
     height: '300px',
     justifyContent: 'space-between',
   },
