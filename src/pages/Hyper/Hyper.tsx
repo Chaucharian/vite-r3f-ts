@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { Layout } from '../../components/Layout'
 import { Footer } from '../../components/Footer/Footer'
 import { Button } from '../../components/Button/Button'
@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core'
 import { styles } from './styles.ts'
 const useStyles = makeStyles(() => styles)
 
-import videoHyperPro from '../../assets/video_scopri_hyper_pro.mp4'
+// import videoHyperPro from '../../assets/video_scopri_hyper_pro.mp4'
 
 export const Hyper = () => {
   const classes = useStyles()
@@ -38,7 +38,11 @@ export const Hyper = () => {
             className={classes.hyperVideo}
             onClick={togglePlayPause}
           >
-            <source src={videoHyperPro} type='video/mp4' />
+            {/* <source src={videoHyperPro} type='video/mp4' /> */}
+            <source
+              src='https://res.cloudinary.com/dgeruy6cj/video/upload/v1711050701/video_scopri_hyper_pro_qsvgbt.mp4'
+              type='video/mp4'
+            />
           </video>
           <div>
             {isPlaying ? null : (

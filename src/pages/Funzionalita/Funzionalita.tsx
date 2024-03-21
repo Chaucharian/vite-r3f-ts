@@ -20,6 +20,7 @@ export const Funzionalita = () => {
             display: 'flex',
             width: '100%',
             height: '100%',
+            maxWidth: '800px',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',

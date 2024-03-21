@@ -31,6 +31,6 @@ export const styles = {
   icon: {
     position: 'absolute' as const,
     top: '45%',
-    left: '60%',
+    left: '47%',
   },
 }

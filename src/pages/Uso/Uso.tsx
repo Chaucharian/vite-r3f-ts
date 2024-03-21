@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { Layout } from '../../components/Layout'
 import { Footer } from '../../components/Footer/Footer'
 import { Button } from '../../components/Button/Button'
@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core'
 import { styles } from './styles.ts'
 const useStyles = makeStyles(() => styles)
 
-import come_si_usa from '../../assets/come_si_usa.mp4'
+// import come_si_usa from '../../assets/come_si_usa.mp4'
 
 export const Uso = () => {
   const classes = useStyles()
@@ -38,7 +38,11 @@ export const Uso = () => {
             className={classes.hyperVideo}
             onClick={togglePlayPause}
           >
-            <source src={come_si_usa} type='video/mp4' />
+            {/* <source src={come_si_usa} type='video/mp4' /> */}
+            <source
+              src='https://res.cloudinary.com/dgeruy6cj/video/upload/v1711050732/come_si_usa_dpxbxv.mp4'
+              type='video/mp4'
+            />
           </video>
           <div>
             {isPlaying ? null : (
