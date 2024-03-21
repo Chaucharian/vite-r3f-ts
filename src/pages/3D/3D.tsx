@@ -2,15 +2,22 @@ import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
 import { ACESFilmicToneMapping, SRGBColorSpace } from 'three'
+import { Button } from '../../components/Button'
+import { ButtonBase } from '../../components/ButtonBase'
 import { ColorButtons } from '../../components/ColorButtons'
 import { Layout } from '../../components/Layout'
 import { useSceneStore } from '../../stores/sceneStore'
 import { Scene } from './Scene'
+import Modal from '@material-ui/core/Modal'
+import Box from '@material-ui/core/Box'
+import { useState } from 'react'
+import useStyles from './styles'
 
 export const Model = () => {
   const changeColor = useSceneStore((state: any) => state.changeColor)
   const color = useSceneStore((state: any) => state.color)
-
+  const [isModalOpen, openModal] = useState(false)
+  const styles  = useStyles()
   return (
     <>
       <div
@@ -22,12 +29,42 @@ export const Model = () => {
           justifyContent: 'center',
           alignItems: 'end',
           display: 'flex',
+          pointerEvents: 'none',
         }}
       >
         <div
-          style={{ width: 400, height: '15%', display: 'flex', justifyContent: 'center' }}
+          style={{
+            width: 400,
+            height: '30%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            pointerEvents: 'all',
+          }}
         >
           <ColorButtons selected={color} onClick={changeColor} />
+          <div style={{height: "6%"}}/>
+          <ButtonBase label='VEDI QR' onClick={() => openModal(true)} />
+          <div style={{height: "16%"}}/>
+          <Button link="/bye" className={styles.button} />
+          <Modal open={isModalOpen} onClose={() => openModal(false)}>
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: 400,
+                height: 400,
+              }}
+            >
+              <h3 style={{ textAlign: 'center' }}>
+                Inquedra il QR code e mostra la tua scelta al nostro staff
+              </h3>
+              <img src={color.qr} width='100%' height='100%' />
+            </div>
+          </Modal>
         </div>
       </div>
       <Layout>
