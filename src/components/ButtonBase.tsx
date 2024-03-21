@@ -1,32 +1,33 @@
 import { makeStyles } from '@material-ui/core'
 import cta from '../../assets/cta.png'
-import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
+
 const useStyles = makeStyles(() => ({
   button: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '30px',
+    borderWidth: '1px',
+    borderColor: 'white',
     height: '50px',
     width: '200px',
-    backgroundColor: 'orange',
+    // backgroundColor: 'orange',
     color: 'white',
   },
 }))
-export const Button = ({
-  link,
-  className = '',
+export const ButtonBase = ({
+    label,
   onClick
 }: {
-  link: string
-  className?: string | undefined
+  label: string
   onClick?: () => void
 }) => {
   const classes = useStyles()
-  // return <div className={classes.button}>{label}</div>
+
   return (
-    <Link to={link} onClick={onClick}>
-      <img src={cta} className={className} />
-    </Link>
+    <Button variant='outlined' onClick={onClick} className={classes.button}>
+        {label}
+    </Button>
   )
 }
