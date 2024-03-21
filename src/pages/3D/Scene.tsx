@@ -60,7 +60,7 @@ const depthBuffer = useDepthBuffer({ frames: 1 })
   return (
     <>
       {/* {performance && <Perf position='top-left' />} */}
-      <Environment map={texture}   blur={0.2} />
+      <Environment map={texture}   blur={0.4} resolution={0.2} />
       {/* <ambientLight intensity={0.9} color="white"/> */}
       {/* <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow /> */}
       {/* <Environment resolution={256}>
