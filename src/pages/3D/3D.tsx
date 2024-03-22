@@ -22,6 +22,8 @@ export const Model = () => {
   const styles = useStyles()
   return (
     <>
+<Layout styles={{ pointerEvents: 'all', position: 'absolute',top:0, height: '100px', background:'red' }}>
+      </Layout>
       <div
         style={{
           position: 'fixed',
@@ -56,7 +58,7 @@ export const Model = () => {
             }}
           />
           <div style={{ height: '16%' }} />
-          {/* <Button link="/bye" className={styles.button} /> */}
+
           <Modal open={isModalOpen} onClose={() => openModal(false)}>
             <div
               style={{
@@ -76,53 +78,67 @@ export const Model = () => {
           </Modal>
         </div>
       </div>
-      <Layout>
-        {/* <Leva
-          collapsed={false}
-          oneLineLabels={false}
-          flat={true}
-          theme={{
-            sizes: {
-              titleBarHeight: '28px',
-            },
-            fontSizes: {
-              root: '10px',
-            },
+      
+      <div style={{ position: 'absolute', top: 0, width: '100vw', height: '100vh', pointerEvents: 'all' }}>
+        {/* TEXTO ROTA EL MODELO */}
+        <div
+          style={{
+            // zIndex: -10,
+            position: 'absolute',
+            top: '10%',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'end',
+            justifyContent: 'center',
+            fontSize: '20px',
+            marginBottom: '20px',
+            fontFamily: 'MontBold',
           }}
-        /> */}
-        <div style={{ position: 'absolute', top: 0, width: '100vw', height: '100vh' }}>
-          <Canvas
-            dpr={[1, 2]}
-            gl={{
-              antialias: true,
-              toneMapping: ACESFilmicToneMapping,
-              outputColorSpace: SRGBColorSpace,
-            }}
-            camera={{
-              fov: 5,
-              // fov: 70,
-              near: 0.1,
-              far: 200,
-              // zoom: 0.125,
-              // zoom: 0.220,
-              zoom: 1.4,
-              // position: [6, 4, 1],
-              // position: [10, 10, 10],
-              // position: [24, 10, 16],
-              position: [-6, 6, 30],
-              // position: [2, 3, 38], // este va
-            }}
-            shadows
-          >
-            <Scene />
-          </Canvas>
+        >
+          {' '}
+          <h1>Ruota il modello 3D</h1>
         </div>
 
-            <div style={{position: 'absolute', top:0,height: '100vh', alignContent:'end', display: 'flelx' }}>
-            <LegalAdvice />
-            </div>
-        
-      </Layout>
+        <Canvas
+          dpr={[1, 2]}
+          gl={{
+            antialias: true,
+            toneMapping: ACESFilmicToneMapping,
+            outputColorSpace: SRGBColorSpace,
+          }}
+          camera={{
+            fov: 5,
+            // fov: 70,
+            near: 0.1,
+            far: 200,
+            // zoom: 0.125,
+            // zoom: 0.220,
+            zoom: 1.4,
+            // position: [6, 4, 1],
+            // position: [10, 10, 10],
+            // position: [24, 10, 16],
+            position: [-6, 6, 30],
+            // position: [2, 3, 38], // este va
+          }}
+          shadows
+        >
+          <Scene />
+        </Canvas>
+      </div>
+
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          height: '100vh',
+          alignContent: 'end',
+          display: 'flelx',
+          pointerEvents: 'none',
+        }}
+      >
+        <LegalAdvice />
+      </div>
+      
     </>
   )
 }

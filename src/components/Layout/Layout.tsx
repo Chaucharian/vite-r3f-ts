@@ -6,10 +6,10 @@ import { styles } from './styles'
 
 const useStyles = makeStyles(():any => styles)
 
-export const Layout = ({ children }: { children: any }) => {
+export const Layout = ({ children, styles: stlyesOverride }: { children: any, styles?:any }) => {
   const classes:any = useStyles()
   return (
-    <div className={classes.container}>
+    <div className={classes.container} style={stlyesOverride}>
       <div className={classes.header}>
         <img className={classes.logo} src={GloLogo} />{' '}
         <Link to='/'>

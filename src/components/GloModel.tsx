@@ -133,6 +133,12 @@ export function Model(props: any) {
     <group {...props} dispose={null} 
     // scale={0.05}
     scale={0.014}
+    onPointerDown={() => {
+      document.documentElement.style.cursor = 'grab' // Set the cursor style
+    }}
+    onPointerUp={() => {
+      document.documentElement.style.cursor = 'default' // Reset the cursor style to default
+    }}
     >
       <group position={[0, -1.198, 38.611]} rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
