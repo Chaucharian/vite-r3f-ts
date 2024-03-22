@@ -70,7 +70,7 @@ const brassMaterial = new MeshStandardMaterial({
 export function Model(props: any) {
   // const model: any = useGLTF('/models/glo_device_wpp.glb')
   // const model: any = useGLTF('/models/glo_latest.glb')
-  const model: any = useGLTF('/models/glo_device_blender_separated2.glb')
+  const model: any = useGLTF('https://res.cloudinary.com/dhvyit5lz/image/upload/v1711073674/b3hosao2u6busaixi1fr.glb')
 
   const { nodes, materials } = model
   const { primary, secondary, detail, detail2 } = props.color
@@ -241,7 +241,7 @@ export function Model(props: any) {
 // useGLTF.preload('/models/glo_device_wpp.glb')
 // useGLTF.preload('/models/glo_latest.glb')
 // useGLTF.preload('/models/glo_device_blender.glb')
-useGLTF.preload('/models/glo_device_blender_separated2.glb')
+useGLTF.preload('https://res.cloudinary.com/dhvyit5lz/image/upload/v1711073674/b3hosao2u6busaixi1fr.glb')
 
 //blender 1first
 // <group {...props} dispose={null} scale={0.01}>
