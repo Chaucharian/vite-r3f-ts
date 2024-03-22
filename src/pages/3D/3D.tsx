@@ -12,6 +12,8 @@ import Modal from '@material-ui/core/Modal'
 import Box from '@material-ui/core/Box'
 import { useState } from 'react'
 import useStyles from './styles'
+import { LegalAdvice } from '../../components/LegalAdvice'
+import { Footer } from '../../components/Footer'
 
 export const Model = () => {
   const changeColor = useSceneStore((state: any) => state.changeColor)
@@ -115,6 +117,11 @@ export const Model = () => {
             <Scene />
           </Canvas>
         </div>
+
+            <div style={{position: 'absolute', top:0,height: '100vh', alignContent:'end', display: 'flelx' }}>
+            <LegalAdvice />
+            </div>
+        
       </Layout>
     </>
   )
