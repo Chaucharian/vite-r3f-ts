@@ -5,8 +5,8 @@ const useStyles = makeStyles(() => styles)
 
 export const Bye = () => {
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      window.location.replace('/')
+    setTimeout(() => {
+      window.location.replace('/vite-r3f-ts')
     }, 3000)
   }, [])
 

@@ -14,9 +14,11 @@ export const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     fontSize: '3em',
+    zindex: 999,
 
     '& svg': {
       fill: 'white !important',
+      zindex: 999,
     },
   },
   logo: {

@@ -7,25 +7,26 @@ const baseStyles = {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '30px',
-  borderWidth: '1px',
-  borderColor: 'white',
-  height: '50px',
-  width: '200px',
+  // borderWidth: '1px',
+  // borderColor: 'white',
+  fontWeight: 'bold',
+  fontSize: '2vw',
+  height: '39px',
+  width: '244px',
   color: 'white',
 }
 export const ButtonBase = ({
-    label,
+  label,
   onClick,
-  styles = {}
+  styles = {},
 }: {
   label: string
   onClick?: () => void
   styles?: any
 }) => {
-
   return (
-    <Button variant='outlined' onClick={onClick} style={{...baseStyles, ...styles}}>
-        {label}
+    <Button variant='outlined' onClick={onClick} style={{ ...baseStyles, ...styles }}>
+      {label}
     </Button>
   )
 }
