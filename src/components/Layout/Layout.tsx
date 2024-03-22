@@ -11,7 +11,7 @@ export const Layout: React.FC<any> = ({ children, styles: stlyesOverride }) => {
   return (
     <div className={classes.container} style={stlyesOverride}>
       <div className={classes.header}>
-        <img className={classes.logo} src={GloLogo} />
+        {/* <img className={classes.logo} src={GloLogo} /> */}
         <Link to='/dashboard'>
           <HomeIcon fontSize='inherit' />
         </Link>

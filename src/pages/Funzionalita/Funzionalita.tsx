@@ -24,9 +24,13 @@ export const Funzionalita = () => {
             // maxWidth: '800px',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'start',
           }}
         >
+          <div className={classes.message1}>
+            <span>ANCORA PIÙ INTUITIVO* </span>
+            <span>CON SMART LED DISPLAY </span>
+          </div>
           <div
             style={{
               display: 'flex',
@@ -47,6 +51,12 @@ export const Funzionalita = () => {
           >
             <img className={classes.image} src={batteria} />
             <img className={classes.image} src={sessione} />
+          </div>
+        </div>
+        <div className={classes.message2Container}>
+          <div className={classes.message2}>
+            *Questo prodotto non è privo di rischi e contiene nicotina, una sostanza che
+            crea dipendenza.
           </div>
         </div>
         <Footer>

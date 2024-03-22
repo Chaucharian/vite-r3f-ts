@@ -7,11 +7,12 @@ export const styles = {
     pointerEvents: 'all',
     zIndex: 10,
     width: '100%',
-    height: '180px',
+    height: '20vh',
     padding: '40px',
     boxSizing: 'border-box' as const,
     display: 'flex',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     fontSize: '3em',
     zindex: 999,
@@ -27,7 +28,7 @@ export const styles = {
   },
   content: {
     width: '100%',
-    height: 'calc(100vh - 180px)',
+    height: '80vh',
     boxSizing: 'border-box' as const,
   },
 }

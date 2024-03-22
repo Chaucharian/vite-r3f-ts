@@ -7,7 +7,7 @@ export const styles = {
     justifyContent: 'space-around',
     background: '#FFFFFF',
     color: 'black',
-    fontSize: '1.4vw',
+    fontSize: '2vw',
     boxSizing: 'border-box',
     fontFamily: 'MontItalic',
   },

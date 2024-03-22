@@ -6,15 +6,15 @@ import { Button } from '../../components/Button/Button'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import { makeStyles } from '@material-ui/core'
 import { styles } from './styles'
-const useStyles = makeStyles(():any => styles)
+const useStyles = makeStyles((): any => styles)
 
 // import videoHyperPro from '../../assets/video_scopri_hyper_pro.mp4'
 
 export const Hyper = () => {
-  const classes:any = useStyles()
+  const classes: any = useStyles()
   const [isPlaying, setIsPlaying] = useState(true)
 
-  const videoRef:any = useRef(null)
+  const videoRef: any = useRef(null)
 
   const togglePlayPause = () => {
     if (videoRef?.current?.paused) {
@@ -39,7 +39,7 @@ export const Hyper = () => {
               ref={videoRef}
               width='90%'
               className={classes.hyperVideo}
-              onClick={togglePlayPause}
+              // onClick={togglePlayPause}
               autoPlay
             >
               {/* <source src={videoHyperPro} type='video/mp4' /> */}
