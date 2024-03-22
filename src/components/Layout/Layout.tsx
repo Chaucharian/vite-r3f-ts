@@ -4,10 +4,10 @@ import GloLogo from '../../assets/gloLogo.svg'
 import { Link } from 'react-router-dom'
 import { styles } from './styles'
 
-const useStyles = makeStyles(() => styles)
+const useStyles = makeStyles(():any => styles)
 
 export const Layout = ({ children }: { children: any }) => {
-  const classes = useStyles()
+  const classes:any = useStyles()
   return (
     <div className={classes.container}>
       <div className={classes.header}>

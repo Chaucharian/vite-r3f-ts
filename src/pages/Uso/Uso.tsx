@@ -5,16 +5,16 @@ import { Footer } from '../../components/Footer/Footer'
 import { Button } from '../../components/Button/Button'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import { makeStyles } from '@material-ui/core'
-import { styles } from './styles.ts'
-const useStyles = makeStyles(() => styles)
+import { styles } from './styles'
+const useStyles = makeStyles(():any => styles)
 
 // import videoHyperPro from '../../assets/video_scopri_hyper_pro.mp4'
 
 export const Uso = () => {
-  const classes = useStyles()
+  const classes:any = useStyles()
   const [isPlaying, setIsPlaying] = useState(true)
 
-  const videoRef = useRef(null)
+  const videoRef:any = useRef(null)
 
   const togglePlayPause = () => {
     if (videoRef?.current?.paused) {
