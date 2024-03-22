@@ -36,9 +36,9 @@ function Scene() {
   const color = useSceneStore((state:any) => state.color);
 
 // FOR TESTING CAMERA POSITION
-useFrame((state)=> {
-console.log(state.camera)
-})
+// useFrame((state)=> {
+// console.log(state.camera)
+// })
 
 const texture = useLoader(
   RGBELoader,
