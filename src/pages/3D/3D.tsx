@@ -24,7 +24,7 @@ export const Model = () => {
   const styles = useStyles()
   return (
     <>
-<Layout styles={{ pointerEvents: 'all', position: 'absolute',top:0, height: '100px', background:'red' }}>
+<Layout styles={{ pointerEvents: 'all', position: 'absolute',top:0, height: '100px' }}>
       </Layout>
       <div
         style={{
