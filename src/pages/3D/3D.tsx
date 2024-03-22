@@ -15,6 +15,8 @@ import useStyles from './styles'
 import { LegalAdvice } from '../../components/LegalAdvice'
 import { Footer } from '../../components/Footer'
 
+const MModal:any = Modal
+
 export const Model = () => {
   const changeColor = useSceneStore((state: any) => state.changeColor)
   const color = useSceneStore((state: any) => state.color)
@@ -59,7 +61,7 @@ export const Model = () => {
           />
           <div style={{ height: '16%' }} />
 
-          <Modal open={isModalOpen} onClose={() => openModal(false)}>
+          <MModal open={isModalOpen} onClose={() => openModal(false)} >
             <div
               style={{
                 position: 'absolute',
@@ -75,7 +77,7 @@ export const Model = () => {
               </h3>
               <img src={color.qr} width='100%' height='100%' />
             </div>
-          </Modal>
+          </MModal>
         </div>
       </div>
       

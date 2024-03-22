@@ -27,6 +27,10 @@
     "three-stdlib": "^2.29.6",
     "zustand": "^4.5.2"
   },
+  "resolutions": {
+    "@types/react": "17.0.14",
+    "@types/react-dom": "17.0.14"
+  },
   "devDependencies": {
     "@types/react": "^18.2.62",
     "@types/react-dom": "^18.2.19",
