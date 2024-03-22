@@ -124,6 +124,10 @@ export function Model(props: any) {
   const tapaColor = new MeshStandardMaterial(materials['Metal (1) [imported]'])
   tapaColor.color.set(primary)
 
+  const parteTraseraColor = new MeshStandardMaterial(materials.Metal)
+  parteTraseraColor.color.set(secondary)
+
+
   // tapa roja
   if (primary === '#242324') {
     tapaColor.color.set(secondary)
@@ -139,8 +143,9 @@ export function Model(props: any) {
     onPointerUp={() => {
       document.documentElement.style.cursor = 'default' // Reset the cursor style to default
     }}
+    position={[0, 0, 0]}
     >
-      <group position={[0, -1.198, 38.611]} rotation={[-Math.PI / 2, 0, 0]}>
+      <group  rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -151,7 +156,8 @@ export function Model(props: any) {
           castShadow
           receiveShadow
           geometry={nodes.Mesh_2.geometry}
-          material={materials['Metal (1) [imported]']}
+          // material={materials['Metal (1) [imported]']}
+          material={parteTraseraColor}
         />
         <mesh
           castShadow
@@ -178,7 +184,8 @@ export function Model(props: any) {
         receiveShadow
         geometry={nodes.display.geometry}
         material={displayColor}
-        position={[4.634, 34.667, 32.304]}
+        // position={[4.634, 34.667, 32.304]}
+        position={[5, 36, -6.5]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
@@ -187,7 +194,8 @@ export function Model(props: any) {
         geometry={nodes.tapa.geometry}
         // material={materials['Metal (1) [imported]']}
         material={tapaColor}
-        position={[-17.95, 62.294, 32.002]}
+        // position={[-17.95, 62.294, 32.002]}
+        position={[-18, 63.5, -6.6]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
@@ -195,7 +203,8 @@ export function Model(props: any) {
         receiveShadow
         geometry={nodes.anillo.geometry}
         material={detailColor}
-        position={[4.634, 34.667, 32.304]}
+        // position={[4.634, 34.667, 32.304]}
+        position={[4.7, 35.92, -6.3]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
     </group>

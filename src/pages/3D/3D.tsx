@@ -60,12 +60,12 @@ export const Model = () => {
                 textAlign: 'center',
               }}
             >
-              Seleziona il colore e mostra la tua scelta al nostro staff
+              Seleziona il colore e registrati
             </div>
             <ColorButtons selected={color} onClick={changeColor} />
             <div style={{ height: '6%' }} />
             <ButtonBase
-              label='VEDI QR'
+              label='Registrati'
               onClick={() => openModal(true)}
               styles={{
                 background:
@@ -96,7 +96,7 @@ export const Model = () => {
                 }}
               >
                 <h3 style={{ textAlign: 'center' }}>
-                  Inquedra il QR code e mostra la tua scelta al nostro staff
+                  Inquadra il QR Code e Registrati.
                 </h3>
                 <img src={color.qr} width='100%' height='100%' />
               </div>
@@ -132,24 +132,25 @@ export const Model = () => {
           </div>
 
           <Canvas
-            dpr={[1, 2]}
-            gl={{
-              antialias: true,
-              toneMapping: ACESFilmicToneMapping,
-              outputColorSpace: SRGBColorSpace,
-            }}
+            // dpr={[1, 2]}
+            // gl={{
+            //   antialias: true,
+            //   toneMapping: ACESFilmicToneMapping,
+            //   outputColorSpace: SRGBColorSpace,
+            // }}
+            gl={{ preserveDrawingBuffer: true }} dpr={[1, 1.5]} 
             camera={{
               fov: 5,
-              // fov: 70,
+              // fov: 50,
               near: 0.1,
               far: 200,
               // zoom: 0.125,
               // zoom: 0.220,
-              zoom: 1,
+              zoom: 1.5,
               // position: [6, 4, 1],
               // position: [10, 10, 10],
               // position: [24, 10, 16],
-              position: [-6, 6, 30],
+              position: [-4, 2, 48],
               // position: [2, 3, 38], // este va
             }}
             shadows
