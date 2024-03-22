@@ -4,7 +4,7 @@ export const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column' as const,
-    paddingTop: '20%',
+    paddingTop: '10vh',
     boxSizing: 'border-box',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -14,16 +14,16 @@ export const styles = {
     alignItems: 'center',
     flexDirection: 'column' as const,
     padding: '30px',
-    width: '50%',
+    width: '50vw',
     height: '90%',
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: '2em',
+    fontSize: '3.2vw',
     marginBottom: '20px',
     fontFamily: 'MontRegular',
   },
-  image: { width: '70%', height: 'auto', marginBottom: '30PX' },
+  image: { width: '30vw', height: 'auto', marginBottom: '30px' },
 
   cta: {
     // width: '150px',
