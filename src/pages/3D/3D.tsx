@@ -15,7 +15,7 @@ import useStyles from './styles'
 import { LegalAdvice } from '../../components/LegalAdvice'
 import { Footer } from '../../components/Footer'
 
-const MModal:any = Modal
+const MModal: any = Modal
 
 export const Model = () => {
   const changeColor = useSceneStore((state: any) => state.changeColor)
@@ -24,8 +24,9 @@ export const Model = () => {
   const styles = useStyles()
   return (
     <>
-<Layout styles={{ pointerEvents: 'all', position: 'absolute',top:0, height: '100px' }}>
-      </Layout>
+      <Layout
+        styles={{ pointerEvents: 'all', position: 'absolute', top: 0, height: '100px' }}
+      ></Layout>
       <div
         style={{
           position: 'fixed',
@@ -61,7 +62,7 @@ export const Model = () => {
           />
           <div style={{ height: '16%' }} />
 
-          <MModal open={isModalOpen} onClose={() => openModal(false)} >
+          <MModal open={isModalOpen} onClose={() => openModal(false)}>
             <div
               style={{
                 position: 'absolute',
@@ -80,8 +81,16 @@ export const Model = () => {
           </MModal>
         </div>
       </div>
-      
-      <div style={{ position: 'absolute', top: 0, width: '100vw', height: '100vh', pointerEvents: 'all' }}>
+
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          width: '100vw',
+          height: '100vh',
+          pointerEvents: 'all',
+        }}
+      >
         {/* TEXTO ROTA EL MODELO */}
         <div
           style={{
@@ -131,16 +140,16 @@ export const Model = () => {
       <div
         style={{
           position: 'absolute',
-          top: 0,
-          height: '100vh',
-          alignContent: 'end',
-          display: 'flelx',
+          bottom: 0,
+          // height: '100vh',
+          // alignContent: 'end',
+          // display: 'flelx',
+          width: '100%',
           pointerEvents: 'none',
         }}
       >
         <LegalAdvice />
       </div>
-      
     </>
   )
 }
