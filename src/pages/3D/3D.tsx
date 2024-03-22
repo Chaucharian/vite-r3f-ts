@@ -13,7 +13,7 @@ import Box from '@material-ui/core/Box'
 import { useState } from 'react'
 import useStyles from './styles'
 import { LegalAdvice } from '../../components/LegalAdvice'
-import { Footer } from '../../components/Footer'
+import { Link } from 'react-router-dom'
 
 const MModal: any = Modal
 
@@ -63,16 +63,16 @@ export const Model = () => {
               }}
             />
             <div style={{ height: '6%' }} />
-            <ButtonBase
-              label='FINE'
-              onClick={() => {
-                window.location.replace('/vite-r3f-ts/bye')
-              }}
-              styles={{
-                background:
-                  'linear-gradient(90deg, rgba(227,86,5,1) 0%, rgba(250,157,27,1) 100%)',
-              }}
-            />
+            <Link to='/bye'>
+              <ButtonBase
+                label='FINE'
+                onClick={() => {}}
+                styles={{
+                  background:
+                    'linear-gradient(90deg, rgba(227,86,5,1) 0%, rgba(250,157,27,1) 100%)',
+                }}
+              />
+            </Link>
 
             <MModal open={isModalOpen} onClose={() => openModal(false)}>
               <div
