@@ -7,4 +7,5 @@ export const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  image: { width: '47%' },
 }

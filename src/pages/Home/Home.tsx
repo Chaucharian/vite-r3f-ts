@@ -1,7 +1,9 @@
 import { Button } from '../../components/Button/Button'
 import { Footer } from '../../components/Footer/Footer'
+import { LegalAdvice } from '../../components/LegalAdvice'
 import { makeStyles } from '@material-ui/core'
 import { styles } from './styles.ts'
+
 const useStyles = makeStyles(() => styles)
 
 export const Home = () => {
@@ -15,6 +17,7 @@ export const Home = () => {
       <Footer>
         <Button link={'dashboard'} className={''} />
       </Footer>
+      <LegalAdvice />
     </div>
   )
 }

@@ -4,8 +4,10 @@ export const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column' as const,
+    paddingTop: '20%',
+    boxSizing: 'border-box',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
   dashboardItem: {
     display: 'flex',
@@ -13,10 +15,17 @@ export const styles = {
     flexDirection: 'column' as const,
     padding: '30px',
     width: '50%',
-    height: '300px',
+    height: '90%',
     justifyContent: 'space-between',
   },
+  title: {
+    fontSize: '2em',
+    marginBottom: '20px',
+    fontFamily: 'MontRegular',
+  },
+  image: { width: '70%', height: 'auto', marginBottom: '30PX' },
+
   cta: {
-    width: '150px',
+    // width: '150px',
   },
 }
