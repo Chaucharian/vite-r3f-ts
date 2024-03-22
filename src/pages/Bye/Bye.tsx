@@ -13,7 +13,7 @@ export const Bye = () => {
   const classes = useStyles()
   return (
     <div className={classes.byeContainer}>
-      <span className={classes.bye}>Bye</span>
+      <span className={classes.bye}>bye</span>
     </div>
   )
 }

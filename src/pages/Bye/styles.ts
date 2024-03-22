@@ -8,9 +8,10 @@ export const styles = {
   },
 
   bye: {
-    fontSize: '100px',
     animation: '$saybye 2.5s ease-out',
     opacity: 0,
+    fontSize: '15vw',
+    fontFamily: 'MontBold',
   },
 
   '@keyframes saybye': {

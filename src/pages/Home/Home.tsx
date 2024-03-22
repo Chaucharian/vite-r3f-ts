@@ -13,7 +13,10 @@ export const Home = () => {
       <div className={classes.hiContainer}>
         <span className={classes.hi}>hi</span>
       </div>
-      <div className={classes.hiBlocker} />
+      <div className={classes.hiBlocker}>
+        <span className={classes.esperienza}>Sei pronto per</span>
+        <span className={classes.esperienza}> un’esperienza PRO? </span>
+      </div>
       <Footer>
         <Button link={'dashboard'} className={''} />
       </Footer>

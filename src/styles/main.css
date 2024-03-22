@@ -25,6 +25,12 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'MontItalic';
+  src: local('MontItalic'), url('../fonts/Mont-RegularItalic.otf') format('opentype');
+  font-weight: normal;
+}
+
 html,
 body {
   height: 100%;

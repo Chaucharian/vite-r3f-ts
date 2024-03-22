@@ -17,9 +17,9 @@ export const styles = {
   },
 
   hi: {
-    fontSize: '100px',
+    fontSize: '15vw',
     animation: '$sayhi 1.5s ease-out',
-    fontFamily: 'MontRegular',
+    fontFamily: 'MontBold',
   },
 
   hiBlocker: {
@@ -27,6 +27,15 @@ export const styles = {
     width: '100%',
     backgroundColor: '#000000',
     zIndex: 2,
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    justifyContent: 'end',
+  },
+
+  esperienza: {
+    fontFamily: 'MontRegular',
+    fontSize: '4vw',
   },
 
   '@keyframes sayhi': {

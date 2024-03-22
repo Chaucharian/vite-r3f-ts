@@ -9,10 +9,10 @@ import home2 from '../../assets/home2.png'
 import home3 from '../../assets/home3.png'
 import home4 from '../../assets/home4.png'
 
-const useStyles = makeStyles(():any => styles)
+const useStyles = makeStyles((): any => styles)
 
 export const Dashboard = () => {
-  const classes:any = useStyles()
+  const classes: any = useStyles()
   return (
     <>
       <Layout>
