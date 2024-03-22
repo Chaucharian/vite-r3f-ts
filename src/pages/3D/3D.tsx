@@ -49,7 +49,7 @@ export const Model = () => {
               alignItems: 'center',
               pointerEvents: 'all',
               zIndex: 999999,
-              marginBottom: '30px',
+              marginBottom: '35px',
             }}
           >
             <div
