@@ -6,7 +6,7 @@ import './styles/main.css'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='vite-r3f-ts'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='dashboard' element={<Dashboard />} />
