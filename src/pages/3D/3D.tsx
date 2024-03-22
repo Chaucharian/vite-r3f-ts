@@ -60,7 +60,7 @@ export const Model = () => {
                 textAlign: 'center',
               }}
             >
-              Seleziona il colore e registrati
+              Inquadra il QR Code e Registrati.
             </div>
             <ColorButtons selected={color} onClick={changeColor} />
             <div style={{ height: '6%' }} />
@@ -95,9 +95,9 @@ export const Model = () => {
                   height: 400,
                 }}
               >
-                <h3 style={{ textAlign: 'center' }}>
+                {/* <h3 style={{ textAlign: 'center' }}>
                   Inquadra il QR Code e Registrati.
-                </h3>
+                </h3> */}
                 <img src={color.qr} width='100%' height='100%' />
               </div>
             </MModal>
@@ -128,7 +128,7 @@ export const Model = () => {
               fontFamily: 'MontBold',
             }}
           >
-            <h1>Ruota il modello 3D</h1>
+            <h1>Seleziona il colore e registrati</h1>
           </div>
 
           <Canvas
