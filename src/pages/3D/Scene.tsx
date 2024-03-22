@@ -36,9 +36,9 @@ function Scene() {
   const color = useSceneStore((state:any) => state.color);
 
 // FOR TESTING CAMERA POSITION
-// useFrame((state)=> {
-// console.log(state.camera)
-// })
+useFrame((state)=> {
+console.log(state.camera)
+})
 
 const texture = useLoader(
   RGBELoader,
@@ -60,7 +60,9 @@ const depthBuffer = useDepthBuffer({ frames: 1 })
   return (
     <>
       {/* {performance && <Perf position='top-left' />} */}
-      <Environment map={texture}   blur={0.4} resolution={0.2} >
+      <Environment map={texture} blur={0.4} resolution={0.2} 
+      // background={true} 
+      >
       <color attach="background" args={['white']} />
       <mesh  scale={100}>
         <sphereGeometry />
@@ -80,7 +82,9 @@ const depthBuffer = useDepthBuffer({ frames: 1 })
         </group>
       </Environment> */}
 
-      <OrbitControls autoRotate />
+      <OrbitControls 
+      autoRotate 
+      />
       {/* <fog attach="fog" args={['#202020', 5, 20]} /> */}
 
       {/* <PivotControls anchor={[0, 0, 0]} depthTest={false} 
@@ -109,7 +113,7 @@ const depthBuffer = useDepthBuffer({ frames: 1 })
             />
 {/* <spotLight position={[8, -2, 0]} angle={0.90} penumbra={1} shadow-mapSize={2048} castShadow  intensity={0.2}/> */}
 </PivotControls>
-      <Model colors={color}/>
+      <Model color={color}/>
       {/* <PivotControls anchor={[0, 0, 0]} depthTest={false} >
       <MovingSpot depthBuffer={depthBuffer} color="white" position={[6, 3, 2]} />
       </PivotControls> */}

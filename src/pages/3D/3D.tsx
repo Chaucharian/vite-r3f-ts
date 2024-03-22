@@ -101,8 +101,14 @@ export const Model = () => {
               // fov: 70,
               near: 0.1,
               far: 200,
-              zoom: 0.125,
-              position: [6, 4, 1],
+              // zoom: 0.125,
+              // zoom: 0.220,
+              zoom: 1.4,
+              // position: [6, 4, 1],
+              // position: [10, 10, 10],
+              // position: [24, 10, 16],
+              position: [-6, 6, 30],
+              // position: [2, 3, 38], // este va
             }}
             shadows
           >
