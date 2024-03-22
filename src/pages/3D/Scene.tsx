@@ -68,6 +68,7 @@ function Scene() {
 
   return (
     <>
+          <ambientLight intensity={0.25} />
       {/* <Environment
         map={texture}
         blur={0.4}
@@ -75,10 +76,7 @@ function Scene() {
         // background={true}
       >
       </Environment> */}
-
-<Environment preset='studio' />
-      {/* <ambientLight intensity={5}  color="white"/> */}
-      {/* <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow /> */}
+<Environment preset='city' />
       {/* <Environment resolution={256}>
         <group rotation={[-Math.PI / 3, 0, 1]}>
           <Lightformer form="circle" intensity={4} color="white" rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={2} />
@@ -89,63 +87,16 @@ function Scene() {
         </group>
       </Environment> */}
 
-      <OrbitControls autoRotate />
-      {/* <fog attach="fog" args={['#202020', 5, 20]} /> */}
-
-      {/* <PivotControls anchor={[0, 0, 0]} depthTest={false} 
-      visible={false}
-      // visible={gizmo} ref={pivotRef}
-      >
-      <directionalLight
-              color={'white'}
-              intensity={2}
-              // intensity={0.2}
-              position={[2,2,3]}
-              castShadow
-              shadow-mapSize={[512, 512]}
-              
-            />
-            </PivotControls> */}
-  
-        {/* <directionalLight
-          color={'white'}
-          intensity={2}
-          // intensity={0.2}
-          position={[2, 2, 3]}
-          castShadow
-          shadow-mapSize={[512, 512]}
-        /> */}
-        <spotLight position={[0, 0, 0]} angle={0.90} penumbra={1} shadow-mapSize={2048} castShadow  intensity={0.2}/>
-        {/* <MovingSpot depthBuffer={depthBuffer} color="white" position={[6, 3, 2]} /> */}
+      <OrbitControls 
+      autoRotate 
+      />
+     
       <Model color={color} />
-      {/* <PivotControls anchor={[0, 0, 0]} depthTest={false} >
-      <MovingSpot depthBuffer={depthBuffer} color="white" position={[6, 3, 2]} />
-      </PivotControls> */}
       {/* <Plane/> */}
       {/* <axesHelper/> */}
     </>
   )
 }
 
-function MovingSpot({ vec = new Vector3(), ...props }) {
-  const light: any = useRef()
-  const viewport = useThree((state) => state.viewport)
-  // useFrame((state) => {
-  //   light.current.target.position.lerp(vec.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * viewport.height) / 2, 0), 0.1)
-  //   light.current.target.updateMatrixWorld()
-  // })
-  return (
-    <SpotLight
-      ref={light}
-      penumbra={0.2}
-      distance={6}
-      angle={0.35}
-      attenuation={5}
-      anglePower={4}
-      intensity={0.3}
-      {...props}
-    />
-  )
-}
 
 export { Scene }
