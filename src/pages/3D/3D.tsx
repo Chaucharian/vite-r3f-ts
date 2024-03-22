@@ -49,9 +49,19 @@ export const Model = () => {
               alignItems: 'center',
               pointerEvents: 'all',
               zIndex: 999999,
-              // marginBottom: '9vh',
+              marginBottom: '10px',
             }}
           >
+            <div
+              style={{
+                fontSize: '2vw',
+                fontFamily: 'MontBold',
+                marginBottom: '10px',
+                textAlign: 'center',
+              }}
+            >
+              Seleziona il colore e mostra la tua scelta al nostro staff
+            </div>
             <ColorButtons selected={color} onClick={changeColor} />
             <div style={{ height: '6%' }} />
             <ButtonBase
