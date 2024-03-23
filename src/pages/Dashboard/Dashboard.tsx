@@ -15,7 +15,7 @@ export const Dashboard = () => {
   const classes: any = useStyles()
   return (
     <>
-      <Layout>
+      <Layout isHome={true}>
         <div className={classes.dashboardContainer}>
           <div
             style={{
