@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
 export const Button = ({
   link,
   className = '',
-  onClick
+  onClick,
 }: {
   link: string
   className?: string | undefined
@@ -25,7 +25,7 @@ export const Button = ({
   const classes = useStyles()
   // return <div className={classes.button}>{label}</div>
   return (
-    <Link to={link} onClick={onClick}>
+    <Link to={link} onClick={onClick} style={{ textDecoration: 'none' }}>
       <img src={cta} className={className} />
     </Link>
   )

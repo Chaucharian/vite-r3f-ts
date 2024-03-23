@@ -73,7 +73,7 @@ export const Model = () => {
               }}
             />
             <div style={{ height: '6%' }} />
-            <Link to='/bye'>
+            <Link to='/bye' style={{ textDecoration: 'none' }}>
               <ButtonBase
                 label='FINE'
                 onClick={() => {}}
