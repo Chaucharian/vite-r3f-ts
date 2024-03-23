@@ -49,7 +49,7 @@ export const Model = () => {
               alignItems: 'center',
               pointerEvents: 'all',
               zIndex: 999999,
-              marginBottom: '35px',
+              marginBottom: '55px',
             }}
           >
             <div
@@ -107,7 +107,7 @@ export const Model = () => {
         <div
           style={{
             position: 'absolute',
-            top: '180px',
+            top: '10vh',
             width: '100%',
             height: '100%',
             pointerEvents: 'all',
@@ -118,12 +118,12 @@ export const Model = () => {
             style={{
               // zIndex: -10,
               position: 'absolute',
-              top: '0',
+              top: '4vh',
               width: '100%',
               display: 'flex',
               alignItems: 'end',
               justifyContent: 'center',
-              fontSize: '20px',
+              fontSize: '2vw',
               marginBottom: '20px',
               fontFamily: 'MontBold',
             }}
@@ -138,7 +138,8 @@ export const Model = () => {
             //   toneMapping: ACESFilmicToneMapping,
             //   outputColorSpace: SRGBColorSpace,
             // }}
-            gl={{ preserveDrawingBuffer: true }} dpr={[1, 1.5]} 
+            gl={{ preserveDrawingBuffer: true }}
+            dpr={[1, 1.5]}
             camera={{
               fov: 5,
               // fov: 50,
