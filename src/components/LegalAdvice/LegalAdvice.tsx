@@ -7,8 +7,8 @@ export const LegalAdvice = () => {
   return (
     <div className={classes.adviceContainer}>
       <span>
-        18+ Only. Prodotto destinato esclusivamente a consumatori ADULTI. Questo prodotto
-        contiene nicotina, che crea dipendenza
+        18+ Only. Prodotto destinato esclusivamente a consumatori adulti. <br />
+        Questo prodotto contiene nicotina, che crea dipendenza
       </span>
       <div className={classes.warning}>18+</div>
     </div>

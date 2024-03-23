@@ -27,44 +27,48 @@ export const Hyper = () => {
   }
 
   return (
-    <Layout>
-      <div className={classes.hyperContainer}>
-        <div className={classes.hyperContent}>
-          <div></div>
-          <div className={classes.videoContainer}>
-            <div className={classes.hyperTitle}>
+    // <Layout>
+    <div className={classes.hyperContainer}>
+      <div className={classes.hyperContent}>
+        <div></div>
+        <div className={classes.videoContainer}>
+          {/* <div className={classes.hyperTitle}>
               <div>Scopri HYPER PRO</div>
-            </div>
-            <video
-              ref={videoRef}
-              width='90%'
-              className={classes.hyperVideo}
-              // onClick={togglePlayPause}
-              autoPlay
-            >
-              {/* <source src={videoHyperPro} type='video/mp4' /> */}
-              <source
+            </div> */}
+          <video
+            ref={videoRef}
+            // width='90%'
+            className={classes.hyperVideo}
+            // onClick={togglePlayPause}
+            autoPlay
+          >
+            {/* <source src={videoHyperPro} type='video/mp4' /> */}
+            {/* <source
                 src='https://res.cloudinary.com/dgeruy6cj/video/upload/v1711050701/video_scopri_hyper_pro_qsvgbt.mp4'
                 type='video/mp4'
+              /> */}
+            <source
+              src='https://res.cloudinary.com/dgeruy6cj/video/upload/v1711230071/hyoper_pro_vertical_g8r2o5.mp4'
+              type='video/mp4'
+            />
+          </video>
+          <div>
+            {isPlaying ? null : (
+              <PlayCircleOutlineIcon
+                fontSize='large'
+                className={classes.icon}
+                onClick={togglePlayPause}
               />
-            </video>
-            <div>
-              {isPlaying ? null : (
-                <PlayCircleOutlineIcon
-                  fontSize='large'
-                  className={classes.icon}
-                  onClick={togglePlayPause}
-                />
-              )}
-            </div>
+            )}
           </div>
-
-          <Footer>
-            <Button link={'/funzionalita'} className={''} />
-          </Footer>
         </div>
-        <LegalAdvice />
+
+        <Footer>
+          <Button link={'/funzionalita'} className={''} />
+        </Footer>
+        {/* <LegalAdvice /> */}
       </div>
-    </Layout>
+    </div>
+    // </Layout>
   )
 }

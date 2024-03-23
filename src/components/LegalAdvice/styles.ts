@@ -4,7 +4,7 @@ export const styles = {
     padding: '2vw',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     background: '#FFFFFF',
     color: 'black',
     fontSize: '2vw',
