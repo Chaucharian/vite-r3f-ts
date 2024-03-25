@@ -95,9 +95,9 @@ export const Model = () => {
                   height: 400,
                 }}
               >
-                {/* <h3 style={{ textAlign: 'center' }}>
+                <h3 style={{ textAlign: 'center' }}>
                   Inquadra il QR Code e Registrati.
-                </h3> */}
+                </h3>
                 <img src={color.qr} width='100%' height='100%' />
               </div>
             </MModal>
