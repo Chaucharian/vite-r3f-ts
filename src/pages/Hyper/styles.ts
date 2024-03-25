@@ -36,6 +36,7 @@ export const styles = {
     flexDirection: 'column' as const,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: '40px',
   },
 
   icon: {

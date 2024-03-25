@@ -7,6 +7,7 @@ import intensita from '../../assets/intensita.png'
 import batteria from '../../assets/batteria.png'
 import rovescia from '../../assets/rovescia.png'
 import sessione from '../../assets/sessione.png'
+import logoHyperPro from '../../assets/hyoer-pro-logo.png'
 import { styles } from './styles.ts'
 
 const useStyles = makeStyles(() => styles)
@@ -20,13 +21,17 @@ export const Funzionalita = () => {
           style={{
             display: 'flex',
             width: '100%',
-            height: '100%',
+            height: '60%',
             // maxWidth: '800px',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'start',
           }}
         >
+          <div className={classes.message1}>
+            <span>ANCORA PIÙ INTUITIVO* </span>
+            <span>CON SMART LED DISPLAY </span>
+          </div>
           <div
             style={{
               display: 'flex',
@@ -47,6 +52,23 @@ export const Funzionalita = () => {
           >
             <img className={classes.image} src={batteria} />
             <img className={classes.image} src={sessione} />
+          </div>
+        </div>
+        <div
+          style={{
+            width: '100%',
+            height: '30%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <img style={{ width: '20vw' }} src={logoHyperPro} />
+        </div>
+        <div className={classes.message2Container}>
+          <div className={classes.message2}>
+            *Questo prodotto non è privo di rischi e contiene nicotina, una sostanza che
+            crea dipendenza.
           </div>
         </div>
         <Footer>

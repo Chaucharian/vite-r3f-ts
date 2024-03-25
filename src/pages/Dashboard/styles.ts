@@ -4,7 +4,6 @@ export const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column' as const,
-    paddingTop: '10vh',
     boxSizing: 'border-box',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -19,13 +18,13 @@ export const styles = {
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: '3.2vw',
+    fontSize: '3.4vw',
     marginBottom: '20px',
     fontFamily: 'MontRegular',
   },
   image: { width: '30vw', height: 'auto', marginBottom: '30px' },
 
   cta: {
-    // width: '150px',
+    width: '30vw',
   },
 }
