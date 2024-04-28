@@ -48,7 +48,7 @@ export const Hyper = () => {
                 type='video/mp4'
               /> */}
             <source
-              src='https://res.cloudinary.com/dgeruy6cj/video/upload/v1711230071/hyoper_pro_vertical_g8r2o5.mp4'
+              src='https://res.cloudinary.com/dgeruy6cj/video/upload/v1714315222/glo-videomodif_ogfm0c.mp4'
               type='video/mp4'
             />
           </video>
